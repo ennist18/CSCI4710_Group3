@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Is your classmate a vampire?</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</head>
+<body>
+  
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+  </style>
+  
+  <form id="form" onsubmit="submit();" method="post" action="">
+    <label>Student's name</label><br>
+    <input type="text" id="name"><br>
+    <input type="checkbox" id="shadow"> This student has no shadow<br>
+    <input type="checkbox" id="pale"> This student has a pale complexion<br>
+    <input type="checkbox" id="garlic"> This student has an aversion to garlic<br>
+  </form>
+  
+  <button type="button" id="button">
+    Submit
+  </button>
+  <br><br>
+  
+  <table id="entries">
+    <tr>
+      <th>Name</th>
+      <th>No Shadow?</th>
+      <th>Pale?</th>
+      <th>No Garlic?</th>
+    </tr>
+  </table>
+  
+  <br>
+  
+  <select id="dropdown" onchange="createPieChart()">
+    <option value="nul">--Please Select--</option>
+    <option value="thr">Threshold Based</option>
+    <option value="ran">Random Guessing</option>
+  </select>
+  
+  <br>
+  
+  <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+  
+    <script src="script.js"></script>
+</body>
+</html>
