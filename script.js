@@ -1,7 +1,7 @@
 var students = [];
 
 function submit(){
-	var form = document.getElementById("form");
+  var form = document.getElementById("form");
   var name = document.getElementById("name").value;
   var shadow = document.getElementById("shadow").checked;
   var pale = document.getElementById("pale").checked;
